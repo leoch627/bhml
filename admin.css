@@ -1,0 +1,193 @@
+:root {
+  --sidebar-width: 260px;
+  --header-height: 48px;
+  --bg-dark: #1e1e1e;
+  --bg-darker: #191919;
+  --bg-light: #252526;
+  --text-main: #cccccc;
+  --accent: #007acc;
+  --border: #333333;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.hidden { display: none !important; }
+
+/* Login */
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d1117;
+  z-index: 100;
+}
+.login-box {
+  width: 320px;
+  padding: 30px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  text-align: center;
+}
+.login-title { margin: 0 0 10px; color: #fff; }
+.login-hint { font-size: 13px; color: #8b949e; margin-bottom: 20px; }
+.login-input {
+  width: 100%; box-sizing: border-box;
+  padding: 10px; margin-bottom: 15px;
+  background: #0d1117; border: 1px solid #30363d;
+  color: #fff; border-radius: 6px; outline: none;
+}
+.login-input:focus { border-color: #58a6ff; }
+.admin-btn {
+  border: none; padding: 10px 20px; border-radius: 6px;
+  cursor: pointer; font-weight: 600; font-size: 14px;
+  transition: opacity 0.2s;
+}
+.admin-btn.primary { background: #238636; color: #fff; }
+.admin-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.full-width { width: 100%; }
+.login-message { margin-top: 15px; color: #f85149; font-size: 13px; height: 18px; }
+
+/* Workspace */
+.workspace {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--bg-dark);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  height: var(--header-height);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 1px;
+}
+
+.icon-btn {
+  background: none; border: none; color: #8b949e; 
+  cursor: pointer; font-size: 16px; padding: 4px;
+}
+.icon-btn:hover { color: #fff; }
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-item {
+  padding: 6px 16px;
+  font-size: 13px;
+  color: var(--text-main);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+
+.file-item:hover { background: #2a2d2e; }
+.file-item.active { background: #37373d; color: #fff; border-left-color: var(--accent); }
+
+/* File Icons (Simple CSS based) */
+.file-item::before {
+  content: "📄"; font-size: 12px; opacity: 0.7;
+}
+.file-item[data-ext=".html"]::before { content: "🌐"; color: #e34c26; opacity: 1; }
+.file-item[data-ext=".css"]::before { content: "🎨"; color: #563d7c; opacity: 1; }
+.file-item[data-ext=".js"]::before { content: "📜"; color: #f1e05a; opacity: 1; }
+.file-item[data-ext=".json"]::before { content: "🔧"; color: #cbcb41; opacity: 1; }
+.file-item[data-ext=".py"]::before { content: "🐍"; color: #3572a5; opacity: 1; }
+
+.sidebar-footer {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.preview-link {
+  color: #58a6ff; text-decoration: none; font-size: 13px;
+}
+.preview-link:hover { text-decoration: underline; }
+
+/* Main Area */
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-darker);
+}
+
+.editor-bar {
+  height: var(--header-height);
+  background: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.tab-filename {
+  font-size: 13px;
+  color: #fff;
+}
+.unsaved-dot { color: #fff; margin-left: 8px; font-size: 10px; }
+
+.actions-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.status-msg {
+  font-size: 12px;
+  color: #8b949e;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.status-msg.show { opacity: 1; }
+.status-msg.error { color: #f85149; }
+.status-msg.success { color: #238636; }
+
+.admin-btn.small {
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.monaco-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.empty-state {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #444;
+  font-size: 14px;
+}

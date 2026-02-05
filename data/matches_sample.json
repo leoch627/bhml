@@ -1,0 +1,90 @@
+{
+  "notes": "示例文件，可复制为 matches.json 使用。包含 completed 与 upcoming 的写法。",
+  "matches": [
+    {
+      "id": "sample-1",
+      "stage": "第一阶段",
+      "status": "completed",
+      "format": "bo1",
+      "time": "2026-02-01T20:00:00+08:00",
+      "teams": { "a": "alpha", "b": "beta" },
+      "score": { "a": 1, "b": 0 },
+      "banpick": [
+        { "team": "alpha", "action": "ban", "map": "Nuke" },
+        { "team": "beta", "action": "ban", "map": "Ancient" },
+        { "team": "alpha", "action": "pick", "map": "Mirage" }
+      ],
+      "maps": [
+        {
+          "name": "Mirage",
+          "score": { "a": 13, "b": 7 },
+          "player_stats": [
+            { "player": "Player1", "team": "alpha", "k": 24, "d": 12, "a": 6, "damage": 86 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sample-2",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo3",
+      "time": "2026-02-03T20:00:00+08:00",
+      "teams": { "a": "alpha", "b": "beta" },
+      "score": { "a": "tba", "b": "tba" },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-06-2000",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-06T20:00:00+08:00",
+      "teams": {
+        "a": "bnu-b",
+        "b": "bjsq"
+      },
+      "score": {
+        "a": 1,
+        "b": 0
+      },
+      "banpick": [
+        { "team": "bnu-b", "action": "ban", "map": "Nuke" },
+        { "team": "bjsq", "action": "ban", "map": "Ancient" },
+        { "team": "bjsq", "action": "ban", "map": "Dust 2" },
+        { "team": "bnu-b", "action": "ban", "map": "Anubis" },
+        { "team": "bnu-b", "action": "ban", "map": "Inferno" },
+        { "team": "bjsq", "action": "ban", "map": "Overpass" },
+        { "team": "bjsq", "action": "pick", "map": "Mirage" }
+      ],
+      "maps": [
+        {
+          "name": "Mirage",
+          "score": { "a": 13, "b": 7 },
+          "player_stats": [
+            { "player": "Player1", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 1686 },
+            { "player": "Player2", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 86 },
+            { "player": "Player3", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 86 },
+            { "player": "Player4", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 86 },
+            { "player": "Player5", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 86 },
+            { "player": "Player6", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 },
+            { "player": "Player7", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 },
+            { "player": "Player8", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 },
+            { "player": "Player9", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 },
+            { "player": "Player10", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 }
+          ]
+        }
+      ]
+    }
+  ],
+  "map_pool": [
+    "Dust 2",
+    "Mirage",
+    "Anubis",
+    "Ancient",
+    "Nuke",
+    "Inferno",
+    "Overpass"
+  ]
+}

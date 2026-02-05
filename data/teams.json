@@ -1,0 +1,57 @@
+{
+  "notes": "teams 是一个对象，key 为战队短 ID。logo 填写相对路径，例如 assets/logos/xxx.png",
+  "teams": {
+    "bnu-a": {
+      "name": "北师大附中 A队",
+      "members": [
+        "TBA"
+      ],
+      "logo": "assets/logos/bnu-a.png"
+    },
+    "bnu-b": {
+      "name": "北师大二附中 B队",
+      "members": [
+        "TBA"
+      ],
+      "logo": "assets/logos/bnu-b.png"
+    },
+    "rdfz": {
+      "name": "人大附中",
+      "members": [
+        "TBA"
+      ],
+      "logo": "assets/logos/rdfz.png"
+    },
+    "bnds": {
+      "name": "BNDS",
+      "members": [
+        "TBA"
+      ],
+      "logo": "assets/logos/bnds.png"
+    },
+    "bnu": {
+      "name": "北师大附中",
+      "members": [
+        "TBA"
+      ],
+      "logo": "assets/logos/bnu.png"
+    },
+    "team-7": {
+      "name": "待定战队",
+      "members": [
+        "TBA"
+      ],
+      "logo": "assets/logos/team-7.png"
+    },
+    "tba": {
+      "name": "TBA",
+      "members": [],
+      "logo": ""
+    },
+    "bjsq": {
+      "members": [],
+      "logo": "",
+      "name": "北京世青"
+    }
+  }
+}

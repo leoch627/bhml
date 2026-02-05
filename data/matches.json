@@ -1,0 +1,184 @@
+{
+  "notes": "matches 为数组，status 可选 upcoming/live/completed/tba。缺失字段会显示 TBA。",
+  "matches": [
+    {
+      "id": "m-2026-02-06-2000",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-06T20:00:00+08:00",
+      "teams": {
+        "a": "bnu-b",
+        "b": "bjsq"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-07-2000",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-07T20:00:00+08:00",
+      "teams": {
+        "a": "rdfz",
+        "b": "bnu"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-07-2200",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-07T22:00:00+08:00",
+      "teams": {
+        "a": "rdfz",
+        "b": "bjsq"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-08-2000",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-08T20:00:00+08:00",
+      "teams": {
+        "a": "rdfz",
+        "b": "bnds"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-08-2200",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-08T22:00:00+08:00",
+      "teams": {
+        "a": "rdfz",
+        "b": "bnu-b"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-09-2000",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-09T20:00:00+08:00",
+      "teams": {
+        "a": "bnds",
+        "b": "bnu"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-09-2200",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-09T22:00:00+08:00",
+      "teams": {
+        "a": "bjsq",
+        "b": "bnu"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-10-2000",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-10T20:00:00+08:00",
+      "teams": {
+        "a": "bnds",
+        "b": "bjsq"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-13-2000",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-13T20:00:00+08:00",
+      "teams": {
+        "a": "bnds",
+        "b": "bnu-b"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-13-2200",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-13T22:00:00+08:00",
+      "teams": {
+        "a": "bnu",
+        "b": "bnu-b"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    }
+  ],
+  "map_pool": [
+    "Dust 2",
+    "Mirage",
+    "Anubis",
+    "Ancient",
+    "Nuke",
+    "Inferno",
+    "Overpass"
+  ]
+}

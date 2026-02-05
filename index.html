@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BHML | Beijing High school Master League</title>
+    <link rel="stylesheet" href="styles.css?v=1.1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="#results" class="brand-link">
+        <img src="assets/logo.jpg" alt="BHML Logo" class="site-logo" />
+        <div class="brand">
+          <div class="brand-title">BHML</div>
+          <div class="brand-subtitle">Beijing High school Master League</div>
+        </div>
+      </a>
+      <div class="tagline">北京高中生大师联赛</div>
+    </header>
+
+    <main class="container">
+      <nav class="tabs" role="tablist" aria-label="BHML 页面导航">
+        <button class="tab is-active" role="tab" aria-selected="true" data-tab="intro">
+          简介
+        </button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="format">
+          赛制
+        </button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="results">
+          比赛
+        </button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="standings">
+          战队
+        </button>
+      </nav>
+
+      <section id="intro" class="panel is-active" role="tabpanel">
+        <div class="intro-layout">
+          <div class="intro-content">
+            <h2>赛事简介</h2>
+            <p>
+              Beijing High school Master League（北京高中生大师联赛, BHML）是由北京市各校高中生参加的 CS
+              联赛。一共 7 支队伍参与，目标是提供一个公平、专业又好玩的竞技平台。
+            </p>
+            <p>
+              赛事报名等相关问题请联系官方邮箱：<a href="mailto:bhmlcs@163.com">bhmlcs@163.com</a>
+              <br />
+              主办方B站（求关注！qwq）：<a target="_blank" href="https://space.bilibili.com/3546574021986993">HyperThread</a>
+              <br />
+              比赛官方转播频道：<a target="_blank" href="https://space.bilibili.com/1839921866">B站：BHML直播台</a>
+            </p>
+            <div class="info-cards">
+              <div class="card">
+                <div class="card-label">参赛队伍</div>
+                <div class="card-value">7</div>
+              </div>
+              <div class="card">
+                <div class="card-label">主办方</div>
+                <div class="card-value">HyperThread 超线程硬件社</div>
+              </div>
+              <div class="card">
+                <div class="card-label">图池</div>
+                <div class="card-value">Dust 2 / Mirage / Anubis / Ancient / Nuke / Inferno / Overpass</div>
+              </div>
+            </div>
+          </div>
+          <div class="intro-logo-area">
+            <img src="assets/logo.jpg" alt="BHML Large Logo" class="intro-large-logo" />
+          </div>
+        </div>
+      </section>
+
+      <section id="format" class="panel" role="tabpanel">
+        <h2>赛制</h2>
+        <p>
+          第一阶段为积分赛，各战队之间比赛场数可能互不相同。根据比赛胜率选出 4
+          支队伍进入第二阶段淘汰赛。
+        </p>
+        <div class="section-block">
+          <h3>赛程表（更新较慢，以本网站<a href="#results">比赛</a>部分为准）</h3>
+          <div class="schedule-image">
+            <img src="assets/schedule.png" alt="BHML 赛程表" />
+          </div>
+          <!--
+          <p class="hint">你可以替换 <code>assets/schedule.png</code> 为最新版赛程图。</p>
+        -->
+        </div>
+      </section>
+
+      <section id="results" class="panel" role="tabpanel">
+        <div class="results-header">
+          <h2>比赛</h2>
+          <div class="legend">
+            <span class="dot dot-completed"></span> 已完成
+            <span class="dot dot-upcoming"></span> 未开始
+            <span class="dot dot-live"></span> 进行中
+          </div>
+        </div>
+        <div class="results-columns">
+          <div>
+            <h3>即将开始</h3>
+            <div id="upcoming-list" class="match-list"></div>
+          </div>
+          <div>
+            <h3>已完成</h3>
+            <div id="completed-list" class="match-list"></div>
+          </div>
+        </div>
+        <!--
+        <div class="section-block">
+          <h3>数据文件</h3>
+          <ul class="data-links">
+            <li>队伍信息：<code>data/teams.json</code></li>
+            <li>比赛记录：<code>data/matches.json</code></li>
+          </ul>
+          <p class="hint">
+            修改 JSON 后刷新网页即可更新内容，缺失字段会自动显示 TBA。
+          </p>
+        </div>
+      -->
+      </section>
+
+      <section id="standings" class="panel" role="tabpanel">
+        <h2>战队</h2>
+        <p>统计已完成的比赛结果，未开始的比赛会显示为 TBA。</p>
+        <div class="standings-table">
+          <div class="standings-row standings-head">
+            <div>战队</div>
+            <div>胜率</div>
+            <div>连胜</div>
+            <div>最近比赛</div>
+          </div>
+          <div id="standings-body" class="standings-body"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>BHML · 北京高中生大师联赛</div>
+    </footer>
+
+    <script src="app.js?v=1.1"></script>
+  </body>
+</html>
