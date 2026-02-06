@@ -38,6 +38,7 @@ const resolveTeam = (teams, id) => {
     name: safeText(team.name, "未知战队"),
     logo: safeText(team.logo, ""),
     members: Array.isArray(team.members) ? team.members : [],
+    substitutes: Array.isArray(team.substitutes) ? team.substitutes : [],
   };
 };
 
@@ -178,9 +179,10 @@ const render = (container, teamId, teams, matches) => {
                 </tr>
               </thead>
               <tbody>
-                ${team.members.length === 0 
+                ${team.members.length === 0 && team.substitutes.length === 0
                   ? "<tr><td>暂无队员信息</td></tr>" 
-                  : team.members.map(m => `<tr><td>${safeText(m)}</td></tr>`).join("")}
+                  : team.members.map(m => `<tr><td>${safeText(m)} <span class="member-tag">主力</span></td></tr>`).join("") +
+                    team.substitutes.map(m => `<tr><td>${safeText(m)} <span class="member-tag sub">替补</span></td></tr>`).join("")}
               </tbody>
             </table>
           </div>

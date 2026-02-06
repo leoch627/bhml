@@ -120,7 +120,8 @@ const loadFiles = async () => {
 const renderFileList = (files) => {
   fileList.innerHTML = "";
   files.forEach((file) => {
-    const ext = file.substring(file.lastIndexOf("."));
+    const lastDotIndex = file.lastIndexOf(".");
+    const ext = lastDotIndex !== -1 ? file.substring(lastDotIndex).toLowerCase() : "";
     const el = document.createElement("div");
     el.className = "file-item";
     el.dataset.path = file;
@@ -132,7 +133,14 @@ const renderFileList = (files) => {
 };
 
 const openFile = async (path) => {
-  if (editorInstance.getModel() && editorInstance.getValue() !== originalContent) {
+  if (path.endsWith("/")) {
+    pathInput.value = path;
+    pathInput.focus();
+    showStatus("Directory selected", "info");
+    return;
+  }
+
+  if (editorInstance && editorInstance.getModel() && editorInstance.getValue() !== originalContent) {
     if (!confirm("You have unsaved changes. Discard them?")) return;
   }
 
@@ -146,23 +154,50 @@ const openFile = async (path) => {
   filenameLabel.textContent = path;
   showStatus("Loading...", "info");
 
+  const lastDotIndex = path.lastIndexOf(".");
+  const ext = lastDotIndex !== -1 ? path.substring(lastDotIndex).toLowerCase() : "";
+  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.ico'];
+  const isImage = imageExtensions.includes(ext);
+
+  const previewContainer = document.getElementById("image-preview-container");
+  const previewImg = document.getElementById("image-preview");
+  const monacoEl = document.getElementById("monaco-container").querySelector(".monaco-editor");
+
+  if (isImage) {
+    // Show image preview
+    if (monacoEl) monacoEl.style.display = "none";
+    previewContainer.classList.remove("hidden");
+    previewImg.src = `/${path}?t=${Date.now()}`; // Add cache buster
+    
+    originalContent = ""; // No text content to track
+    unsavedDot.classList.add("hidden");
+    saveBtn.disabled = true;
+    showStatus("Image Preview", "success");
+    document.querySelector(".empty-state").style.display = "none";
+    return;
+  }
+
+  // Text file logic
+  previewContainer.classList.add("hidden");
+  if (monacoEl) monacoEl.style.display = "block";
+
   try {
     const res = await fetch(`/api/fs/file?path=${encodeURIComponent(path)}`, {
       headers: setHeaders(),
     });
     checkAuth(res);
-    if (!res.ok) throw new Error("File not found");
+    if (!res.ok) throw new Error("File not found or cannot be read");
 
     const data = await res.json();
     originalContent = data.content;
     
     // Determine language
     let lang = "plaintext";
-    if (path.endsWith(".html")) lang = "html";
-    else if (path.endsWith(".css")) lang = "css";
-    else if (path.endsWith(".js")) lang = "javascript";
-    else if (path.endsWith(".json")) lang = "json";
-    else if (path.endsWith(".py")) lang = "python";
+    if (ext === ".html") lang = "html";
+    else if (ext === ".css") lang = "css";
+    else if (ext === ".js") lang = "javascript";
+    else if (ext === ".json") lang = "json";
+    else if (ext === ".py") lang = "python";
 
     monaco.editor.setModelLanguage(editorInstance.getModel(), lang);
     editorInstance.setValue(originalContent);

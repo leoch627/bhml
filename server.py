@@ -52,10 +52,18 @@ def api_fs_list():
         return jsonify({"error": "unauthorized"}), 401
     
     files_list = []
-    for root, dirs, files in os.walk(BASE_DIR):
+    # Use followlinks=True to ensure symlinked directories are traversed
+    for root, dirs, files in os.walk(BASE_DIR, followlinks=True):
         dirs[:] = [d for d in dirs if d not in IGNORED_DIRS]
         
         rel_root = Path(root).relative_to(BASE_DIR)
+        
+        # Include directories in the list if they are not the root
+        for d in dirs:
+            full_rel_path = rel_root / d
+            path_str = str(full_rel_path).replace("\\", "/") + "/"
+            if path_str != "./":
+                files_list.append(path_str)
         
         for f in files:
             if f in IGNORED_FILES or f.startswith('.'):

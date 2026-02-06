@@ -954,3 +954,24 @@ p {
     align-items: flex-start;
   }
 }
+
+/* Member Tags */
+.member-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 11px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: rgba(90, 120, 255, 0.15);
+  color: var(--accent-blue);
+  border: 1px solid rgba(90, 120, 255, 0.3);
+  vertical-align: middle;
+}
+
+.member-tag.sub {
+  background: rgba(139, 147, 169, 0.15);
+  color: var(--text-muted);
+  border: 1px solid rgba(139, 147, 169, 0.3);
+}
