@@ -14,6 +14,13 @@ const saveBtn = document.getElementById("save-btn");
 const statusMsg = document.getElementById("status-msg");
 const filenameLabel = document.getElementById("current-filename");
 const unsavedDot = document.getElementById("unsaved-indicator");
+const pathInput = document.getElementById("path-input");
+const openPathBtn = document.getElementById("open-path-btn");
+const newFileBtn = document.getElementById("new-file-btn");
+const uploadBtn = document.getElementById("upload-btn");
+const fileInput = document.getElementById("file-input");
+const quickPathButtons = document.querySelectorAll(".path-chip");
+const dropZone = document.getElementById("drop-zone");
 
 // --- Monaco Setup ---
 require.config({
@@ -198,6 +205,67 @@ const saveFile = async () => {
   }
 };
 
+const createFile = async (path, content = "") => {
+  if (!path) {
+    showStatus("请输入文件路径", "error");
+    return;
+  }
+
+  try {
+    const res = await fetch(`/api/fs/file?path=${encodeURIComponent(path)}`, {
+      method: "POST",
+      headers: setHeaders(),
+      body: JSON.stringify({ content }),
+    });
+    checkAuth(res);
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.error || "Create failed");
+    }
+
+    showStatus("创建成功", "success");
+    loadFiles();
+    openFile(path);
+  } catch (err) {
+    showStatus(`Create error: ${err.message}`, "error");
+  }
+};
+
+const uploadFile = async (file, path) => {
+  if (!path) {
+    showStatus("请输入保存路径", "error");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("path", path);
+
+  showStatus("Uploading...", "info");
+
+  try {
+    const res = await fetch("/api/fs/upload", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${getToken()}`,
+      },
+      body: formData,
+    });
+    checkAuth(res);
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.error || "Upload failed");
+    }
+
+    showStatus(`已上传到 ${path}`, "success");
+    loadFiles();
+  } catch (err) {
+    showStatus(`Upload error: ${err.message}`, "error");
+  }
+};
+
 // --- Event Listeners ---
 document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -225,6 +293,64 @@ document.getElementById("logout-btn").addEventListener("click", () => {
 });
 
 document.getElementById("save-btn").addEventListener("click", saveFile);
+
+quickPathButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const base = btn.dataset.path || "";
+    pathInput.value = base;
+    pathInput.focus();
+  });
+});
+
+openPathBtn.addEventListener("click", () => {
+  const path = pathInput.value.trim();
+  if (path) {
+    openFile(path);
+  }
+});
+
+newFileBtn.addEventListener("click", () => {
+  const path = pathInput.value.trim();
+  if (path) {
+    createFile(path);
+  } else {
+    showStatus("请输入文件路径", "error");
+  }
+});
+
+uploadBtn.addEventListener("click", () => fileInput.click());
+
+fileInput.addEventListener("change", (e) => {
+  if (e.target.files.length > 0) {
+    const file = e.target.files[0];
+    const defaultPath = file.name;
+    const path = (pathInput.value || defaultPath).trim();
+    uploadFile(file, path);
+    e.target.value = "";
+  }
+});
+
+if (dropZone) {
+  dropZone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZone.classList.add("is-active");
+  });
+
+  dropZone.addEventListener("dragleave", () => {
+    dropZone.classList.remove("is-active");
+  });
+
+  dropZone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropZone.classList.remove("is-active");
+
+    const file = e.dataTransfer?.files?.[0];
+    if (!file) return;
+    const defaultPath = file.name;
+    const path = (pathInput.value || defaultPath).trim();
+    uploadFile(file, path);
+  });
+}
 
 // --- Init ---
 const storedToken = getToken();

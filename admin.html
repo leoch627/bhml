@@ -10,7 +10,7 @@
     <style>
       /* Inline critical CSS to prevent FOUC */
       body { margin: 0; overflow: hidden; background: #0b0d14; color: #e6e9f2; }
-      .loading-screen { position: fixed; inset: 0; display: flex; center; align-items: center; justify-content: center; background: #0b0d14; z-index: 9999; }
+      .loading-screen { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #0b0d14; z-index: 9999; }
     </style>
     <link rel="stylesheet" href="admin.css?v=2.0" />
   </head>
@@ -37,6 +37,25 @@
           <button id="logout-btn" class="icon-btn" title="Logout">↩</button>
         </div>
         <div class="sidebar-content">
+          <div class="path-tools">
+            <div class="path-title">快速路径</div>
+            <div class="path-quick">
+              <button class="path-chip" data-path="assets/">assets/</button>
+              <button class="path-chip" data-path="assets/logos/">assets/logos/</button>
+              <button class="path-chip" data-path="data/">data/</button>
+            </div>
+            <div class="path-input-row">
+              <input id="path-input" class="path-input" placeholder="输入路径/文件名（例如 assets/logo.png）" />
+              <button id="open-path-btn" class="admin-btn small">打开</button>
+            </div>
+          <div class="path-actions">
+            <button id="new-file-btn" class="admin-btn small">新建文件</button>
+            <button id="upload-btn" class="admin-btn small">上传</button>
+          </div>
+          <div id="drop-zone" class="drop-zone">拖拽文件到此处上传</div>
+            <input type="file" id="file-input" class="hidden" />
+          </div>
+          <div class="path-title">文件列表</div>
           <div id="file-list" class="file-list"></div>
         </div>
         <div class="sidebar-footer">

@@ -215,9 +215,12 @@ const renderMatches = () => {
   completedList.innerHTML = "";
 
   const sorted = [...state.matches].sort((a, b) => {
-    const timeA = new Date(a?.time || 0).getTime() || 0;
-    const timeB = new Date(b?.time || 0).getTime() || 0;
-    return timeA - timeB;
+    const getTime = (m) => {
+      if (!m?.time) return Infinity;
+      const t = new Date(m.time).getTime();
+      return isNaN(t) ? Infinity : t;
+    };
+    return getTime(a) - getTime(b);
   });
 
   const completed = sorted.filter((match) => match?.status === "completed");
@@ -280,7 +283,14 @@ const buildTeamStats = () => {
   Object.values(stats).forEach((teamStat) => {
     const matches = completedMatches
       .filter((match) => match?.teams?.a === teamStat.id || match?.teams?.b === teamStat.id)
-      .sort((a, b) => new Date(a?.time || 0) - new Date(b?.time || 0));
+      .sort((a, b) => {
+        const getTime = (m) => {
+          if (!m?.time) return 0;
+          const t = new Date(m.time).getTime();
+          return isNaN(t) ? 0 : t;
+        };
+        return getTime(a) - getTime(b);
+      });
     teamStat.lastMatch = matches.length > 0 ? matches[matches.length - 1] : null;
   });
 
@@ -290,7 +300,14 @@ const buildTeamStats = () => {
 const getStreak = (teamId) => {
   const completedMatches = state.matches
     .filter((match) => match?.status === "completed")
-    .sort((a, b) => new Date(b?.time || 0) - new Date(a?.time || 0));
+    .sort((a, b) => {
+      const getTime = (m) => {
+        if (!m?.time) return 0;
+        const t = new Date(m.time).getTime();
+        return isNaN(t) ? 0 : t;
+      };
+      return getTime(b) - getTime(a);
+    });
   let streak = 0;
   let streakType = null;
   for (const match of completedMatches) {

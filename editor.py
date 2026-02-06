@@ -262,7 +262,7 @@ class BHMLEditor:
             
         match_entry = {
             "id": mid,
-            "stage": "第一阶段",
+            "stage": "第一阶段年前",
             "status": self.m_status_v.get(),
             "format": "bo1",
             "time": "2026-02-01T20:00:00+08:00", # 默认占位

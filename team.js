@@ -137,14 +137,24 @@ const render = (container, teamId, teams, matches) => {
   }
 
   const teamMatches = matches.filter(m => m.teams.a === teamId || m.teams.b === teamId);
+  const getTime = (m) => {
+    if (!m?.time) return Infinity;
+    const t = new Date(m.time).getTime();
+    return isNaN(t) ? Infinity : t;
+  };
+
   const upcoming = teamMatches
     .filter(m => m.status !== "completed")
-    .sort((a, b) => new Date(a.time || 0) - new Date(b.time || 0))
+    .sort((a, b) => getTime(a) - getTime(b))
     .slice(0, 3);
   
   const completed = teamMatches
     .filter(m => m.status === "completed")
-    .sort((a, b) => new Date(b.time || 0) - new Date(a.time || 0))
+    .sort((a, b) => {
+      const tA = getTime(a) === Infinity ? 0 : getTime(a);
+      const tB = getTime(b) === Infinity ? 0 : getTime(b);
+      return tB - tA;
+    })
     .slice(0, 3);
 
   container.innerHTML = `

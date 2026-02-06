@@ -36,7 +36,6 @@ def _require_auth() -> bool:
     return _get_token() == ADMIN_TOKEN
 
 
-ALLOWED_EXTENSIONS = {'.html', '.css', '.js', '.json', '.txt', '.md', '.py'}
 IGNORED_DIRS = {'.git', '.venv', '__pycache__', '.idea', '.vscode'}
 IGNORED_FILES = {'server.py', 'bhml.db'}
 
@@ -59,12 +58,11 @@ def api_fs_list():
         rel_root = Path(root).relative_to(BASE_DIR)
         
         for f in files:
-            if f in IGNORED_FILES:
+            if f in IGNORED_FILES or f.startswith('.'):
                 continue
-            if Path(f).suffix.lower() in ALLOWED_EXTENSIONS:
-                 full_rel_path = rel_root / f
-                 path_str = f if str(full_rel_path) == "." else str(full_rel_path).replace("\\", "/")
-                 files_list.append(path_str)
+            full_rel_path = rel_root / f
+            path_str = f if str(full_rel_path) == "." else str(full_rel_path).replace("\\", "/")
+            files_list.append(path_str)
                      
     files_list.sort()
     return jsonify({"files": files_list})
@@ -98,10 +96,40 @@ def api_fs_file():
              return jsonify({"error": "missing_content"}), 400
         
         try:
+            target_path.parent.mkdir(parents=True, exist_ok=True)
             target_path.write_text(payload["content"], encoding="utf-8")
             return jsonify({"ok": True})
         except Exception as e:
             return jsonify({"error": str(e)}), 500
+
+@app.route("/api/fs/upload", methods=["POST"])
+def api_fs_upload():
+    if not _require_auth():
+        return jsonify({"error": "unauthorized"}), 401
+
+    if "file" not in request.files:
+        return jsonify({"error": "missing_file"}), 400
+
+    file_obj = request.files["file"]
+    if not file_obj or not file_obj.filename:
+        return jsonify({"error": "invalid_file"}), 400
+
+    requested_path = (request.form.get("path") or "").strip()
+    if requested_path.endswith("/"):
+        requested_path = f"{requested_path}{file_obj.filename}"
+    if not requested_path:
+        requested_path = file_obj.filename
+
+    if not _is_safe_path(requested_path):
+        return jsonify({"error": "invalid_path"}), 403
+
+    target_path = (BASE_DIR / requested_path).resolve()
+    try:
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        file_obj.save(str(target_path))
+        return jsonify({"ok": True, "path": requested_path})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route("/api/teams", methods=["GET", "POST"])
 def api_teams():
