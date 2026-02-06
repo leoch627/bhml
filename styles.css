@@ -677,6 +677,16 @@ p {
   font-size: 12px;
 }
 
+.bp-side {
+  color: var(--text-bright);
+  font-weight: 600;
+  margin-left: 4px;
+  background: var(--tab-active-bg);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
 .stats-tables-grid.stacked {
   grid-template-columns: 1fr !important;
   gap: 30px;

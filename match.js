@@ -1,3 +1,5 @@
+const MANUAL_RATING_ONLY = false;
+
 const safeText = (value, fallback = "TBA") => {
   if (value === null || value === undefined || value === "") {
     return fallback;
@@ -104,10 +106,10 @@ const render = (container, match, teams) => {
           entry.d = (toNumber(entry.d) || 0) + (toNumber(ps.d) || 0);
           entry.a = (toNumber(entry.a) || 0) + (toNumber(ps.a) || 0);
           entry.damage = (toNumber(entry.damage) || 0) + (toNumber(ps.damage) || 0);
-          // If rating exists in data, average it, otherwise calculation will handle it
+          // If rating exists in data, average it
           if (ps.rating) {
             entry.rating = (toNumber(entry.rating) || 0) + (toNumber(ps.rating) || 0);
-            entry._count = (entry._count || 1) + 1;
+            entry._count = (entry._count || 0) + 1;
           }
         }
       });
@@ -173,12 +175,18 @@ const render = (container, match, teams) => {
               banpick.length === 0
                 ? "<li>暂无数据</li>"
                 : banpick
-                    .map(
-                      (item) =>
-                        `<li><span class="bp-team">${resolveTeam(teams, item?.team).name}</span> <span class="bp-action">${safeText(item?.action)}</span> ${safeText(
-                          item?.map
-                        )}</li>`
-                    )
+                  .map((item) => {
+                    const teamName = resolveTeam(teams, item?.team).name;
+                    let actionLabel = safeText(item?.action).toLowerCase();
+                    if (actionLabel == "ban") actionLabel = "禁用了";
+                    else if (actionLabel == "pick") actionLabel = "选择了";
+                    else if (actionLabel == "side") actionLabel = "选边";
+
+                    const mapText = item?.map ? safeText(item.map) : "";
+                    const sideText = item?.side ? `<span class="bp-side">${safeText(item.side)}</span>` : "";
+                    
+                    return `<li><span class="bp-team">${teamName}</span> <span class="bp-action">${actionLabel}</span> ${mapText} ${sideText}</li>`;
+                  })
                     .join("")
             }
           </ul>
@@ -189,15 +197,6 @@ const render = (container, match, teams) => {
 
   const statsArea = container.querySelector("#stats-display-area");
   
-  const calculateRating = (p) => {
-    if (p.rating) return toNumber(p.rating);
-    const k = toNumber(p.k) || 0;
-    const a = toNumber(p.a) || 0;
-    const d = Math.max(1, toNumber(p.d) || 0);
-    // Simplified rating formula: (K + 0.7*A) / D
-    return (k + 0.7 * a) / d;
-  };
-
   const renderStatsTables = (playerStats) => {
     const teamAId = match?.teams?.a;
     const teamBId = match?.teams?.b;
@@ -211,11 +210,33 @@ const render = (container, match, teams) => {
       String(p.team).toLowerCase() === String(teamBId).toLowerCase()
     );
 
+    // Check if we should use K/D instead of Rating
+    const useKD = !MANUAL_RATING_ONLY && playerStats.every(p => {
+      const r = toNumber(p.rating);
+      return r == null || r == 0;
+    });
+
+    const calculateVal = (p) => {
+      if (useKD) {
+        const k = toNumber(p?.k) || 0;
+        const d = Math.max(1, toNumber(p?.d) || 0);
+        return k / d;
+      }
+      return toNumber(p?.rating);
+    };
+
     const renderTable = (teamName, teamPlayers) => {
       if (teamPlayers.length === 0) return `<p>${teamName}：暂无数据</p>`;
       
-      // Sort players by rating descending
-      const sortedPlayers = [...teamPlayers].sort((a, b) => calculateRating(b) - calculateRating(a));
+      // Sort players by value descending, nulls at the end
+      const sortedPlayers = [...teamPlayers].sort((a, b) => {
+        const rA = calculateVal(a);
+        const rB = calculateVal(b);
+        if (rA === null && rB === null) return 0;
+        if (rA === null) return 1;
+        if (rB === null) return -1;
+        return rB - rA;
+      });
 
       const rows = sortedPlayers
         .map((player) => {
@@ -227,10 +248,14 @@ const render = (container, match, teams) => {
           if (diff > 0) diffClass = "diff-pos";
           else if (diff < 0) diffClass = "diff-neg";
 
-          const rating = calculateRating(player);
-          let ratingClass = "";
-          if (rating > 1.00) ratingClass = "diff-pos";
-          else if (rating < 0.90) ratingClass = "diff-neg";
+          const val = calculateVal(player);
+          let valClass = "";
+          let valText = "—";
+          if (val !== null) {
+            valText = val.toFixed(2);
+            if (val > 1.00) valClass = "diff-pos";
+            else if (val < 0.90) valClass = "diff-neg";
+          }
 
           return `
             <tr>
@@ -240,7 +265,7 @@ const render = (container, match, teams) => {
               <td class="${diffClass}">${diffText}</td>
               <td>${safeText(player?.a)}</td>
               <td>${safeText(player?.damage)}</td>
-              <td class="${ratingClass} font-mono">${rating.toFixed(2)}</td>
+              <td class="${valClass} font-mono">${valText}</td>
             </tr>
           `;
         }).join("");
@@ -258,7 +283,7 @@ const render = (container, match, teams) => {
                   <th>+/-</th>
                   <th>A</th>
                   <th>伤害</th>
-                  <th>Rating</th>
+                  <th>${useKD ? "K/D" : "Rating"}</th>
                 </tr>
               </thead>
               <tbody>

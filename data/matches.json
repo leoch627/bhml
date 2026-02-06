@@ -4,7 +4,7 @@
     {
       "id": "m-2026-02-06-2000",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-06T20:00:00+08:00",
       "teams": {
@@ -12,16 +12,42 @@
         "b": "bjsq"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "3",
+        "b": "13"
       },
-      "banpick": [],
-      "maps": []
+      "banpick": [
+        { "team": "bnub", "action": "ban", "map": "Dust 2" },
+        { "team": "bjsq", "action": "ban", "map": "Mirage" },
+        { "team": "bjsq", "action": "ban", "map": "Inferno" },
+        { "team": "bnub", "action": "ban", "map": "Nuke" },
+        { "team": "bnub", "action": "ban", "map": "Anubis" },
+        { "team": "bjsq", "action": "ban", "map": "Ancient" },
+        { "team": "bjsq", "action": "pick", "map": "Overpass" },
+        { "team": "bjsq", "action": "side", "side": "CT", "map": "Overpass" }
+      ],
+      "maps": [
+        {
+          "name": "Overpass",
+          "score": { "a": 3, "b": 13 },
+          "player_stats": [
+            { "player": "wlam", "team": "bnub", "k": 6, "d": 13, "rating": 0.00},
+            { "player": "无敌捷风大王258", "team": "bnub", "k": 17, "d": 14, "rating": 0.00},
+            { "player": "Kevin.F", "team": "bnub", "k": 2, "d": 13, "rating": 0.00},
+            { "player": "Zont1X", "team": "bnub", "k": 13, "d": 14, "rating": 0.00},
+            { "player": "北宇治枪神", "team": "bnub", "k": 7, "d": 15, "rating": 0.00},
+            { "player": "yzrbullet", "team": "bjsq", "k": 16, "d": 8, "damage": 0, "rating": 0.00},
+            { "player": "顶针bullet", "team": "bjsq", "k": 21, "d": 8, "rating": 0.00},
+            { "player": "姜海琳nzj", "team": "bjsq", "k": 12, "d": 6, "rating": 0.00},
+            { "player": "赵继伟bullet", "team": "bjsq", "k": 3, "d": 11, "rating": 0.00},
+            { "player": "ishhbullet", "team": "bjsq", "k": 17, "d": 15, "rating": 0.00}
+          ]
+        }
+      ]
     },
     {
       "id": "m-2026-02-06-2200",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-06T22:00:00+08:00",
       "teams": {
@@ -29,11 +55,37 @@
         "b": "bnub"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "13",
+        "b": "0"
       },
-      "banpick": [],
-      "maps": []
+      "banpick": [
+        { "team": "bnds", "action": "ban", "map": "Inferno" },
+        { "team": "bnds", "action": "ban", "map": "Overpass" },
+        { "team": "bnub", "action": "ban", "map": "Dust 2" },
+        { "team": "bnub", "action": "ban", "map": "Nuke" },
+        { "team": "bnub", "action": "ban", "map": "Anubis" },
+        { "team": "bnds", "action": "ban", "map": "Ancient" },
+        { "team": "bnds", "action": "pick", "map": "Mirage" },
+        { "team": "bnub", "action": "side", "side": "CT", "map": "Mirage" }
+      ],
+      "maps": [
+        {
+          "name": "Mirage",
+          "score": { "a": 13, "b": 0 },
+          "player_stats": [
+            { "player": "Player1", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
+            { "player": "Player2", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
+            { "player": "Player3", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
+            { "player": "Player4", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
+            { "player": "Player5", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
+            { "player": "Player6", "team": "bnds", "k": 0, "d": 0, "damage": 0, "rating": 0.00},
+            { "player": "Player7", "team": "bnds", "k": 0, "d": 0, "rating": 0.00},
+            { "player": "Player8", "team": "bnds", "k": 0, "d": 0, "rating": 0.00},
+            { "player": "Player9", "team": "bnds", "k": 0, "d": 0, "rating": 0.00},
+            { "player": "Player10", "team": "bnds", "k": 0, "d": 0, "rating": 0.00}
+          ]
+        }
+      ]
     },
     {
       "id": "m-2026-02-07-2200",
