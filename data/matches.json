@@ -73,16 +73,16 @@
           "name": "Mirage",
           "score": { "a": 13, "b": 0 },
           "player_stats": [
-            { "player": "Player1", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
-            { "player": "Player2", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
-            { "player": "Player3", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
-            { "player": "Player4", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
-            { "player": "Player5", "team": "bnub", "k": 0, "d": 0, "rating": 0.00},
-            { "player": "Player6", "team": "bnds", "k": 0, "d": 0, "damage": 0, "rating": 0.00},
-            { "player": "Player7", "team": "bnds", "k": 0, "d": 0, "rating": 0.00},
-            { "player": "Player8", "team": "bnds", "k": 0, "d": 0, "rating": 0.00},
-            { "player": "Player9", "team": "bnds", "k": 0, "d": 0, "rating": 0.00},
-            { "player": "Player10", "team": "bnds", "k": 0, "d": 0, "rating": 0.00}
+            { "player": "Zont1X", "team": "bnub", "k": 4, "d": 13, "rating": 0.00},
+            { "player": "北宇治枪神", "team": "bnub", "k": 1, "d": 11, "rating": 0.00},
+            { "player": "wlam", "team": "bnub", "k": 2, "d": 11, "rating": 0.00},
+            { "player": "无敌捷风大王258", "team": "bnub", "k": 3, "d": 13, "rating": 0.00},
+            { "player": "Stewie Griffin", "team": "bnub", "k": 1, "d": 13, "rating": 0.00},
+            { "player": "拔刀斩不斩", "team": "bnds", "k": 13, "d": 2, "damage": 0, "rating": 0.00},
+            { "player": "areubOtttt", "team": "bnds", "k": 14, "d": 4, "rating": 0.00},
+            { "player": "lala1023", "team": "bnds", "k": 9, "d": 3, "rating": 0.00},
+            { "player": "炸了做淀粉肠都不给你", "team": "bnds", "k": 11, "d": 3, "rating": 0.00},
+            { "player": "一只熊某", "team": "bnds", "k": 13, "d": 0, "rating": 0.00}
           ]
         }
       ]
