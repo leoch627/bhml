@@ -173,23 +173,6 @@
       "maps": []
     },
     {
-      "id": "m-2026-02-09-2200",
-      "stage": "第一阶段",
-      "status": "upcoming",
-      "format": "bo1",
-      "time": "2026-02-09T22:00:00+08:00",
-      "teams": {
-        "a": "bjsq",
-        "b": "bnuo"
-      },
-      "score": {
-        "a": "tba",
-        "b": "tba"
-      },
-      "banpick": [],
-      "maps": []
-    },
-    {
       "id": "m-2026-02-13-2300",
       "stage": "第一阶段",
       "status": "upcoming",
