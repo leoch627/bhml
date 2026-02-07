@@ -1,0 +1,15 @@
+# Python venv
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# logs / runtime
+*.log
+*.pid
+
+# secrets
+.env
