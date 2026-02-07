@@ -214,17 +214,27 @@ const renderMatches = () => {
   upcomingList.innerHTML = "";
   completedList.innerHTML = "";
 
-  const sorted = [...state.matches].sort((a, b) => {
-    const getTime = (m) => {
-      if (!m?.time) return Infinity;
-      const t = new Date(m.time).getTime();
-      return isNaN(t) ? Infinity : t;
-    };
-    return getTime(a) - getTime(b);
-  });
+  const upcoming = [...state.matches]
+    .filter((match) => match?.status !== "completed")
+    .sort((a, b) => {
+      const getTime = (m) => {
+        if (!m?.time) return Infinity;
+        const t = new Date(m.time).getTime();
+        return isNaN(t) ? Infinity : t;
+      };
+      return getTime(a) - getTime(b);
+    });
 
-  const completed = sorted.filter((match) => match?.status === "completed");
-  const upcoming = sorted.filter((match) => match?.status !== "completed");
+  const completed = [...state.matches]
+    .filter((match) => match?.status === "completed")
+    .sort((a, b) => {
+      const getTime = (m) => {
+        if (!m?.time) return 0;
+        const t = new Date(m.time).getTime();
+        return isNaN(t) ? 0 : t;
+      };
+      return getTime(b) - getTime(a);
+    });
 
   if (upcoming.length === 0) {
     upcomingList.innerHTML = "<div class='match-card'>暂无赛程</div>";
