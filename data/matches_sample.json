@@ -19,7 +19,7 @@
           "name": "Mirage",
           "score": { "a": 13, "b": 7 },
           "player_stats": [
-            { "player": "Player1", "team": "alpha", "k": 24, "d": 12, "a": 6, "damage": 86 }
+            { "player": "Player1", "team": "alpha", "k": 24, "d": 12, "a": 6, "adr": 86 }
           ]
         }
       ]
@@ -63,16 +63,16 @@
           "name": "Mirage",
           "score": { "a": 13, "b": 7 },
           "player_stats": [
-            { "player": "Player1", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 1686 },
-            { "player": "Player2", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 86 },
-            { "player": "Player3", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 86 },
-            { "player": "Player4", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 86 },
-            { "player": "Player5", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "damage": 86 },
-            { "player": "Player6", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 },
-            { "player": "Player7", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 },
-            { "player": "Player8", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 },
-            { "player": "Player9", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 },
-            { "player": "Player10", "team": "bjsq", "k": 12, "d": 24, "a": 10, "damage": 86 }
+            { "player": "Player1", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "adr": 1686 },
+            { "player": "Player2", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "adr": 86 },
+            { "player": "Player3", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "adr": 86 },
+            { "player": "Player4", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "adr": 86 },
+            { "player": "Player5", "team": "bnu-b", "k": 24, "d": 12, "a": 6, "adr": 86 },
+            { "player": "Player6", "team": "bjsq", "k": 12, "d": 24, "a": 10, "adr": 86 },
+            { "player": "Player7", "team": "bjsq", "k": 12, "d": 24, "a": 10, "adr": 86 },
+            { "player": "Player8", "team": "bjsq", "k": 12, "d": 24, "a": 10, "adr": 86 },
+            { "player": "Player9", "team": "bjsq", "k": 12, "d": 24, "a": 10, "adr": 86 },
+            { "player": "Player10", "team": "bjsq", "k": 12, "d": 24, "a": 10, "adr": 86 }
           ]
         }
       ]

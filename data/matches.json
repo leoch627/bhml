@@ -35,7 +35,7 @@
             { "player": "Kevin.F", "team": "bnub", "k": 2, "d": 13, "rating": 0.00},
             { "player": "Zont1X", "team": "bnub", "k": 13, "d": 14, "rating": 0.00},
             { "player": "北宇治枪神", "team": "bnub", "k": 7, "d": 15, "rating": 0.00},
-            { "player": "yzrbullet", "team": "bjsq", "k": 16, "d": 8, "damage": 0, "rating": 0.00},
+            { "player": "yzrbullet", "team": "bjsq", "k": 16, "d": 8, "adr": 0, "rating": 0.00},
             { "player": "顶针bullet", "team": "bjsq", "k": 21, "d": 8, "rating": 0.00},
             { "player": "姜海琳nzj", "team": "bjsq", "k": 12, "d": 6, "rating": 0.00},
             { "player": "赵继伟bullet", "team": "bjsq", "k": 3, "d": 11, "rating": 0.00},
@@ -78,7 +78,7 @@
             { "player": "wlam", "team": "bnub", "k": 2, "d": 11, "rating": 0.00},
             { "player": "无敌捷风大王258", "team": "bnub", "k": 3, "d": 13, "rating": 0.00},
             { "player": "Stewie Griffin", "team": "bnub", "k": 1, "d": 13, "rating": 0.00},
-            { "player": "拔刀斩不斩", "team": "bnds", "k": 13, "d": 2, "damage": 0, "rating": 0.00},
+            { "player": "拔刀斩不斩", "team": "bnds", "k": 13, "d": 2, "adr": 0, "rating": 0.00},
             { "player": "areubOtttt", "team": "bnds", "k": 14, "d": 4, "rating": 0.00},
             { "player": "lala1023", "team": "bnds", "k": 9, "d": 3, "rating": 0.00},
             { "player": "炸了做淀粉肠都不给你", "team": "bnds", "k": 11, "d": 3, "rating": 0.00},
@@ -90,7 +90,7 @@
     {
       "id": "m-2026-02-07-2200",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-07T22:00:00+08:00",
       "teams": {
@@ -98,11 +98,37 @@
         "b": "bjsq"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "4",
+        "b": "13"
       },
-      "banpick": [],
-      "maps": []
+      "banpick": [
+        { "team": "rdfz", "action": "ban", "map": "Inferno" },
+        { "team": "rdfz", "action": "ban", "map": "Nuke" },
+        { "team": "bjsq", "action": "ban", "map": "Ancient" },
+        { "team": "bjsq", "action": "ban", "map": "Anubis" },
+        { "team": "bjsq", "action": "ban", "map": "Mirage" },
+        { "team": "rdfz", "action": "ban", "map": "Overpass" },
+        { "team": "rdfz", "action": "pick", "map": "Dust 2" },
+        { "team": "rdfz", "action": "side", "side": "CT", "map": "Dust 2" }
+      ],
+      "maps": [
+        {
+          "name": "Dust 2",
+          "score": { "a": 4, "b": 13 },
+          "player_stats": [
+            { "player": "m0SEsy", "team": "rdfz", "k": 6, "d": 14, "a": 2, "rating": 0.65, "adr": 53},
+            { "player": "Ali&dom", "team": "rdfz", "k": 11, "d": 14, "a": 2, "rating": 0.95, "adr": 63},
+            { "player": "卷轴", "team": "rdfz", "k": 8, "d": 16, "a": 6, "rating": 0.86, "adr": 75},
+            { "player": "涉谷第一突破手", "team": "rdfz", "k": 12, "d": 15, "a": 3, "rating": 1.04, "adr": 76},
+            { "player": "Jason", "team": "rdfz", "k": 10, "d": 15, "a": 5, "rating": 1.01, "adr": 75},
+            { "player": "ishhbullet", "team": "bjsq", "k": 21, "d": 10, "a": 4, "rating": 1.66, "adr": 118},
+            { "player": "yzrbullet", "team": "bjsq", "k": 19, "d": 9, "a": 3, "rating": 1.49, "adr": 105},
+            { "player": "顶针bullet", "team": "bjsq", "k": 10, "d": 11, "a": 4, "rating": 0.99, "adr": 74},
+            { "player": "赵继伟bullet", "team": "bjsq", "k": 13, "d": 11, "a": 4, "rating": 1.12, "adr": 71},
+            { "player": "姜海琳nzj", "team": "bjsq", "k": 11, "d": 6, "a": 5, "rating": 1.05, "adr": 77}
+          ]
+        }
+      ]
     },
     {
       "id": "m-2026-02-08-2000",

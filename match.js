@@ -105,7 +105,7 @@ const render = (container, match, teams) => {
           entry.k = (toNumber(entry.k) || 0) + (toNumber(ps.k) || 0);
           entry.d = (toNumber(entry.d) || 0) + (toNumber(ps.d) || 0);
           entry.a = (toNumber(entry.a) || 0) + (toNumber(ps.a) || 0);
-          entry.damage = (toNumber(entry.damage) || 0) + (toNumber(ps.damage) || 0);
+          entry.adr = (toNumber(entry.adr) || 0) + (toNumber(ps.adr) || 0);
           // If rating exists in data, average it
           if (ps.rating) {
             entry.rating = (toNumber(entry.rating) || 0) + (toNumber(ps.rating) || 0);
@@ -115,7 +115,10 @@ const render = (container, match, teams) => {
       });
     });
     playerMap.forEach(ps => {
-      if (ps._count) ps.rating = ps.rating / ps._count;
+      if (ps._count) {
+        ps.rating = ps.rating / ps._count;
+        ps.adr = ps.adr / ps._count;
+      }
       allStats.push(ps);
     });
   }
@@ -264,7 +267,7 @@ const render = (container, match, teams) => {
               <td>${safeText(player?.d)}</td>
               <td class="${diffClass}">${diffText}</td>
               <td>${safeText(player?.a)}</td>
-              <td>${safeText(player?.damage)}</td>
+              <td>${safeText(player?.adr)}</td>
               <td class="${valClass} font-mono">${valText}</td>
             </tr>
           `;
@@ -282,7 +285,7 @@ const render = (container, match, teams) => {
                   <th>D</th>
                   <th>+/-</th>
                   <th>A</th>
-                  <th>伤害</th>
+                  <th>ADR</th>
                   <th>${useKD ? "K/D" : "Rating"}</th>
                 </tr>
               </thead>
