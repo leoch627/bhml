@@ -149,6 +149,14 @@ const render = (container, match, teams) => {
       <span>${toDateLabel(match?.time)}</span>
     </div>
 
+    ${match?.replay ? `
+    <div class="match-replay-box">
+      <a href="${match.replay}" target="_blank" class="replay-link">
+        <span class="replay-icon">▶</span> 查看比赛回放
+      </a>
+    </div>
+    ` : ""}
+
     <div class="detail-layout-grid">
       <div class="detail-main-content">
         <div class="detail-section">
