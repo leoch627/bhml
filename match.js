@@ -136,6 +136,11 @@ const render = (container, match, teams) => {
           <span class="hero-score ${scoreClassB}">${scoreB}</span>
         </div>
         <div class="hero-status">${statusLabel}</div>
+        ${match?.replay ? `
+          <a href="${match.replay}" target="_blank" class="hero-replay-link" title="查看比赛回放">
+            <span class="replay-icon">▶</span> 回放
+          </a>
+        ` : ""}
       </div>
       <a href="team.html?id=${match?.teams?.b}" class="hero-team hero-team-b clickable-team">
         <img src="${teamB.logo}" alt="" onerror="this.style.display='none'" />
@@ -148,14 +153,6 @@ const render = (container, match, teams) => {
       <span>${format}</span>
       <span>${toDateLabel(match?.time)}</span>
     </div>
-
-    ${match?.replay ? `
-    <div class="match-replay-box">
-      <a href="${match.replay}" target="_blank" class="replay-link">
-        <span class="replay-icon">▶</span> 查看比赛回放
-      </a>
-    </div>
-    ` : ""}
 
     <div class="detail-layout-grid">
       <div class="detail-main-content">
