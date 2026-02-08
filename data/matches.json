@@ -139,7 +139,6 @@
       "status": "completed",
       "format": "bo1",
       "time": "2026-02-08T20:00:00+08:00",
-      "replay": "https://www.bilibili.com/video/BV1ReFkzFE94/",
       "teams": {
         "a": "rdfz",
         "b": "bnuo"
@@ -201,7 +200,12 @@
         { "team": "bnub", "action": "pick", "map": "Dust 2" },
         { "team": "bnub", "action": "side", "side": "CT", "map": "Dust 2" }
       ],
-      "maps": []
+      "maps": [
+        {
+          "name": "Dust 2",
+          "score": { "a": 0, "b": 0 }
+        }
+      ]
     },
     {
       "id": "m-2026-02-09-2000",
