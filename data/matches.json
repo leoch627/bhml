@@ -228,14 +228,23 @@
       "format": "bo1",
       "time": "2026-02-09T20:00:00+08:00",
       "teams": {
-        "a": "bnds",
+        "a": "bnub",
         "b": "bnuo"
       },
       "score": {
         "a": "tba",
         "b": "tba"
       },
-      "banpick": [],
+      "banpick": [
+        { "team": "bnuo", "action": "ban", "map": "Inferno" },
+        { "team": "bnuo", "action": "ban", "map": "Nuke" },
+        { "team": "bnub", "action": "ban", "map": "Overpass" },
+        { "team": "bnub", "action": "ban", "map": "Dust 2" },
+        { "team": "bnub", "action": "ban", "map": "Mirage" },
+        { "team": "bnuo", "action": "ban", "map": "Anubis" },
+        { "team": "bnub", "action": "pick", "map": "Ancient" },
+        { "team": "bnub", "action": "side", "side": "CT", "map": "Ancient" }
+      ],
       "maps": []
     },
     {
@@ -275,11 +284,11 @@
     {
       "id": "m-2026-02-13-2000",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "tba",
       "format": "bo1",
-      "time": "2026-02-13T20:00:00+08:00",
+      "time": "",
       "teams": {
-        "a": "bnuo",
+        "a": "bnds",
         "b": "bnub"
       },
       "score": {
