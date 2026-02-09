@@ -179,7 +179,7 @@
     {
       "id": "m-2026-02-08-2200",
       "stage": "第一阶段",
-      "status": "live",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-08T22:00:00+08:00",
       "teams": {
@@ -187,8 +187,8 @@
         "b": "bnub"
       },
       "score": {
-        "a": "0",
-        "b": "0"
+        "a": "9",
+        "b": "13"
       },
       "banpick": [
         { "team": "rdfz", "action": "ban", "map": "Nuke" },
@@ -203,7 +203,19 @@
       "maps": [
         {
           "name": "Dust 2",
-          "score": { "a": 0, "b": 0 }
+          "score": { "a": 9, "b": 13 },
+          "player_stats": [
+            { "player": "我不是青年", "team": "rdfz", "k": 20, "d": 14, "a": 2, "rating": 1.18, "adr": 83.23},
+            { "player": "涉谷第一突破手", "team": "rdfz", "k": 16, "d": 18, "a": 7, "rating": 1.14, "adr": 97.05},
+            { "player": "m0SEsy", "team": "rdfz", "k": 13, "d": 17, "a": 7, "rating": 0.93, "adr": 78.32},
+            { "player": "用户1115FZ9hGnjT", "team": "rdfz", "k": 14, "d": 17, "a": 3, "rating": 0.91, "adr": 68.18},
+            { "player": "卷轴", "team": "rdfz", "k": 12, "d": 15, "a": 4, "rating": 0.72, "adr": 52.09},
+            { "player": "斯坦的纳维亚夜莺", "team": "bnub", "k": 22, "d": 15, "a": 8, "rating": 1.52, "adr": 116.09},
+            { "player": "无敌捷风大王258", "team": "bnub", "k": 14, "d": 14, "a": 13, "rating": 1.09, "adr": 83.82},
+            { "player": "用户02171ZrL14fc", "team": "bnub", "k": 16, "d": 18, "a": 3, "rating": 0.96, "adr": 70.05},
+            { "player": "CauchyX", "team": "bnub", "k": 16, "d": 14, "a": 4, "rating": 0.91, "adr": 64.14},
+            { "player": "wlam", "team": "bnub", "k": 13, "d": 14, "a": 5, "rating": 0.89, "adr": 66.36}
+          ]
         }
       ]
     },
