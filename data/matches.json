@@ -222,9 +222,26 @@
       ]
     },
     {
-      "id": "m-2026-02-09-2000",
+      "id": "m-2026-02-10-2000",
       "stage": "第一阶段",
       "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-10T20:00:00+08:00",
+      "teams": {
+        "a": "bnds",
+        "b": "bnuo"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-09-2000",
+      "stage": "第一阶段",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-09T20:00:00+08:00",
       "teams": {
@@ -232,8 +249,8 @@
         "b": "bnuo"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "13",
+        "b": "6"
       },
       "banpick": [
         { "team": "bnuo", "action": "ban", "map": "Inferno" },
@@ -245,7 +262,12 @@
         { "team": "bnub", "action": "pick", "map": "Ancient" },
         { "team": "bnub", "action": "side", "side": "CT", "map": "Ancient" }
       ],
-      "maps": []
+      "maps": [
+        {
+          "name": "Ancient",
+          "score": { "a": 13, "b": 6 }
+        }
+      ]
     },
     {
       "id": "m-2026-02-11-2000",
