@@ -1,0 +1,376 @@
+{
+  "notes": "matches 为数组，status 可选 upcoming/live/completed/tba。缺失字段会显示 TBA。",
+  "matches": [
+    {
+      "id": "m-2026-02-06-2000",
+      "stage": "第一阶段",
+      "status": "completed",
+      "format": "bo1",
+      "time": "2026-02-06T20:00:00+08:00",
+      "replay": "https://www.bilibili.com/video/BV1ReFkzFE94/",
+      "teams": {
+        "a": "bnub",
+        "b": "bjsq"
+      },
+      "score": {
+        "a": "3",
+        "b": "13"
+      },
+      "banpick": [
+        { "team": "bnub", "action": "ban", "map": "Dust 2" },
+        { "team": "bjsq", "action": "ban", "map": "Mirage" },
+        { "team": "bjsq", "action": "ban", "map": "Inferno" },
+        { "team": "bnub", "action": "ban", "map": "Nuke" },
+        { "team": "bnub", "action": "ban", "map": "Anubis" },
+        { "team": "bjsq", "action": "ban", "map": "Ancient" },
+        { "team": "bjsq", "action": "pick", "map": "Overpass" },
+        { "team": "bjsq", "action": "side", "side": "CT", "map": "Overpass" }
+      ],
+      "maps": [
+        {
+          "name": "Overpass",
+          "score": { "a": 3, "b": 13 },
+          "player_stats": [
+            { "player": "wlam", "team": "bnub", "k": 6, "d": 13, "rating": 0.00},
+            { "player": "无敌捷风大王258", "team": "bnub", "k": 17, "d": 14, "rating": 0.00},
+            { "player": "Kevin.F", "team": "bnub", "k": 2, "d": 13, "rating": 0.00},
+            { "player": "Zont1X", "team": "bnub", "k": 13, "d": 14, "rating": 0.00},
+            { "player": "北宇治枪神", "team": "bnub", "k": 7, "d": 15, "rating": 0.00},
+            { "player": "yzrbullet", "team": "bjsq", "k": 16, "d": 8, "adr": 0, "rating": 0.00},
+            { "player": "顶针bullet", "team": "bjsq", "k": 21, "d": 8, "rating": 0.00},
+            { "player": "姜海琳nzj", "team": "bjsq", "k": 12, "d": 6, "rating": 0.00},
+            { "player": "赵继伟bullet", "team": "bjsq", "k": 3, "d": 11, "rating": 0.00},
+            { "player": "ishhbullet", "team": "bjsq", "k": 17, "d": 15, "rating": 0.00}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2026-02-06-2200",
+      "stage": "第一阶段",
+      "status": "completed",
+      "format": "bo1",
+      "time": "2026-02-06T22:00:00+08:00",
+      "replay": "https://www.bilibili.com/video/BV1nsFkzTEDW/",
+      "teams": {
+        "a": "bnds",
+        "b": "bnub"
+      },
+      "score": {
+        "a": "13",
+        "b": "0"
+      },
+      "banpick": [
+        { "team": "bnds", "action": "ban", "map": "Inferno" },
+        { "team": "bnds", "action": "ban", "map": "Overpass" },
+        { "team": "bnub", "action": "ban", "map": "Dust 2" },
+        { "team": "bnub", "action": "ban", "map": "Nuke" },
+        { "team": "bnub", "action": "ban", "map": "Anubis" },
+        { "team": "bnds", "action": "ban", "map": "Ancient" },
+        { "team": "bnds", "action": "pick", "map": "Mirage" },
+        { "team": "bnub", "action": "side", "side": "CT", "map": "Mirage" }
+      ],
+      "maps": [
+        {
+          "name": "Mirage",
+          "score": { "a": 13, "b": 0 },
+          "player_stats": [
+            { "player": "Zont1X", "team": "bnub", "k": 4, "d": 13, "rating": 0.00},
+            { "player": "北宇治枪神", "team": "bnub", "k": 1, "d": 11, "rating": 0.00},
+            { "player": "wlam", "team": "bnub", "k": 2, "d": 11, "rating": 0.00},
+            { "player": "无敌捷风大王258", "team": "bnub", "k": 3, "d": 13, "rating": 0.00},
+            { "player": "Stewie Griffin", "team": "bnub", "k": 1, "d": 13, "rating": 0.00},
+            { "player": "拔刀斩不斩", "team": "bnds", "k": 13, "d": 2, "adr": 0, "rating": 0.00},
+            { "player": "areubOtttt", "team": "bnds", "k": 14, "d": 4, "rating": 0.00},
+            { "player": "lala1023", "team": "bnds", "k": 9, "d": 3, "rating": 0.00},
+            { "player": "炸了做淀粉肠都不给你", "team": "bnds", "k": 11, "d": 3, "rating": 0.00},
+            { "player": "一只熊某", "team": "bnds", "k": 13, "d": 0, "rating": 0.00}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2026-02-07-2200",
+      "stage": "第一阶段",
+      "status": "completed",
+      "format": "bo1",
+      "time": "2026-02-07T22:00:00+08:00",
+      "teams": {
+        "a": "rdfz",
+        "b": "bjsq"
+      },
+      "score": {
+        "a": "4",
+        "b": "13"
+      },
+      "replay":"https://www.bilibili.com/video/BV17rFxznEhS/",
+      "banpick": [
+        { "team": "rdfz", "action": "ban", "map": "Inferno" },
+        { "team": "rdfz", "action": "ban", "map": "Nuke" },
+        { "team": "bjsq", "action": "ban", "map": "Ancient" },
+        { "team": "bjsq", "action": "ban", "map": "Anubis" },
+        { "team": "bjsq", "action": "ban", "map": "Mirage" },
+        { "team": "rdfz", "action": "ban", "map": "Overpass" },
+        { "team": "rdfz", "action": "pick", "map": "Dust 2" },
+        { "team": "rdfz", "action": "side", "side": "CT", "map": "Dust 2" }
+      ],
+      "maps": [
+        {
+          "name": "Dust 2",
+          "score": { "a": 4, "b": 13 },
+          "player_stats": [
+            { "player": "m0SEsy", "team": "rdfz", "k": 6, "d": 14, "a": 2, "rating": 0.65, "adr": 53},
+            { "player": "Ali&dom", "team": "rdfz", "k": 11, "d": 14, "a": 2, "rating": 0.95, "adr": 63},
+            { "player": "卷轴", "team": "rdfz", "k": 8, "d": 16, "a": 6, "rating": 0.86, "adr": 75},
+            { "player": "涉谷第一突破手", "team": "rdfz", "k": 12, "d": 15, "a": 3, "rating": 1.04, "adr": 76},
+            { "player": "Jason", "team": "rdfz", "k": 10, "d": 15, "a": 5, "rating": 1.01, "adr": 75},
+            { "player": "ishhbullet", "team": "bjsq", "k": 21, "d": 10, "a": 4, "rating": 1.66, "adr": 118},
+            { "player": "yzrbullet", "team": "bjsq", "k": 19, "d": 9, "a": 3, "rating": 1.49, "adr": 105},
+            { "player": "顶针bullet", "team": "bjsq", "k": 10, "d": 11, "a": 4, "rating": 0.99, "adr": 74},
+            { "player": "赵继伟bullet", "team": "bjsq", "k": 13, "d": 11, "a": 4, "rating": 1.12, "adr": 71},
+            { "player": "姜海琳nzj", "team": "bjsq", "k": 11, "d": 6, "a": 5, "rating": 1.05, "adr": 77}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2026-02-08-2000",
+      "stage": "第一阶段",
+      "status": "completed",
+      "format": "bo1",
+      "time": "2026-02-08T20:00:00+08:00",
+      "teams": {
+        "a": "rdfz",
+        "b": "bnuo"
+      },
+      "replay": "https://www.bilibili.com/video/BV1LfcKzcEQJ/",
+      "score": {
+        "a": "3",
+        "b": "13"
+      },
+      "banpick": [
+        { "team": "bnuo", "action": "ban", "map": "Inferno" },
+        { "team": "bnuo", "action": "ban", "map": "Nuke" },
+        { "team": "rdfz", "action": "ban", "map": "Overpass" },
+        { "team": "rdfz", "action": "ban", "map": "Dust 2" },
+        { "team": "rdfz", "action": "ban", "map": "Ancient" },
+        { "team": "bnuo", "action": "ban", "map": "Anubis" },
+        { "team": "bnuo", "action": "pick", "map": "Mirage" },
+        { "team": "bnuo", "action": "side", "side": "CT", "map": "Mirage" }
+      ],
+      "maps": [
+        {
+          "name": "Mirage",
+          "score": { "a": 3, "b": 13 },
+          "player_stats": [
+            { "player": "我不是青年", "team": "rdfz", "k": 10, "d": 14, "a": 4, "rating": 0.96, "adr": 73},
+            { "player": "卷轴", "team": "rdfz", "k": 10, "d": 14, "a": 1, "rating": 0.87, "adr": 68},
+            { "player": "涉谷第一突破手", "team": "rdfz", "k": 8, "d": 14, "a": 5, "rating": 0.80, "adr": 67},
+            { "player": "用户1115FZ9hGnjT", "team": "rdfz", "k": 7, "d": 14, "a": 5, "rating": 0.77, "adr": 62},
+            { "player": "m0SEsy", "team": "rdfz", "k": 4, "d": 16, "a": 0, "rating": 0.34, "adr": 30},
+            { "player": "Nightmare♡", "team": "bnuo", "k": 26, "d": 7, "a": 4, "rating": 2.30, "adr": 152},
+            { "player": "Claris彩虹糖", "team": "bnuo", "k": 16, "d": 8, "a": 0, "rating": 1.32, "adr": 87},
+            { "player": "平平无奇娜娜奇", "team": "bnuo", "k": 14, "d": 9, "a": 6, "rating": 1.22, "adr": 90},
+            { "player": "紫月幽魔", "team": "bnuo", "k": 7, "d": 9, "a": 12, "rating": 0.93, "adr": 80},
+            { "player": "Lpm3k", "team": "bnuo", "k": 9, "d": 6, "a": 1, "rating": 0.79, "adr": 49}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2026-02-08-2200",
+      "stage": "第一阶段",
+      "status": "completed",
+      "format": "bo1",
+      "time": "2026-02-08T22:00:00+08:00",
+      "teams": {
+        "a": "rdfz",
+        "b": "bnub"
+      },
+      "replay": "https://www.bilibili.com/video/BV19AcTztECJ/",
+      "score": {
+        "a": "9",
+        "b": "13"
+      },
+      "banpick": [
+        { "team": "rdfz", "action": "ban", "map": "Nuke" },
+        { "team": "rdfz", "action": "ban", "map": "Mirage" },
+        { "team": "bnub", "action": "ban", "map": "Inferno" },
+        { "team": "bnub", "action": "ban", "map": "Anubis" },
+        { "team": "bnub", "action": "ban", "map": "Overpass" },
+        { "team": "rdfz", "action": "ban", "map": "Ancient" },
+        { "team": "bnub", "action": "pick", "map": "Dust 2" },
+        { "team": "bnub", "action": "side", "side": "CT", "map": "Dust 2" }
+      ],
+      "maps": [
+        {
+          "name": "Dust 2",
+          "score": { "a": 9, "b": 13 },
+          "player_stats": [
+            { "player": "我不是青年", "team": "rdfz", "k": 20, "d": 14, "a": 2, "rating": 1.18, "adr": 83.23},
+            { "player": "涉谷第一突破手", "team": "rdfz", "k": 16, "d": 18, "a": 7, "rating": 1.14, "adr": 97.05},
+            { "player": "m0SEsy", "team": "rdfz", "k": 13, "d": 17, "a": 7, "rating": 0.93, "adr": 78.32},
+            { "player": "用户1115FZ9hGnjT", "team": "rdfz", "k": 14, "d": 17, "a": 3, "rating": 0.91, "adr": 68.18},
+            { "player": "卷轴", "team": "rdfz", "k": 12, "d": 15, "a": 4, "rating": 0.72, "adr": 52.09},
+            { "player": "斯坦的纳维亚夜莺", "team": "bnub", "k": 22, "d": 15, "a": 8, "rating": 1.52, "adr": 116.09},
+            { "player": "无敌捷风大王258", "team": "bnub", "k": 14, "d": 14, "a": 13, "rating": 1.09, "adr": 83.82},
+            { "player": "用户02171ZrL14fc", "team": "bnub", "k": 16, "d": 18, "a": 3, "rating": 0.96, "adr": 70.05},
+            { "player": "CauchyX", "team": "bnub", "k": 16, "d": 14, "a": 4, "rating": 0.91, "adr": 64.14},
+            { "player": "wlam", "team": "bnub", "k": 13, "d": 14, "a": 5, "rating": 0.89, "adr": 66.36}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2026-02-10-2000",
+      "stage": "第一阶段",
+      "status": "completed",
+      "format": "bo1",
+      "time": "2026-02-10T20:00:00+08:00",
+      "teams": {
+        "a": "bnds",
+        "b": "bnuo"
+      },
+      "score": {
+        "a": "13",
+        "b": "4"
+      },
+      "banpick": [
+        { "team": "bnds", "action": "ban", "map": "Inferno" },
+        { "team": "bnds", "action": "ban", "map": "Dust 2" },
+        { "team": "bnuo", "action": "ban", "map": "Nuke" },
+        { "team": "bnuo", "action": "ban", "map": "Ancient" },
+        { "team": "bnuo", "action": "ban", "map": "Overpass" },
+        { "team": "bnds", "action": "ban", "map": "Anubis" },
+        { "team": "bnds", "action": "pick", "map": "Mirage" },
+        { "team": "bnuo", "action": "side", "side": "CT", "map": "Mirage" }
+      ],
+      "maps": [
+        {
+          "name": "Mirage",
+          "score": { "a": 13, "b": 4 },
+          "player_stats": [
+            { "player": "areub0ttt", "team": "bnds", "k": 12, "d": 11, "a": 3},
+            { "player": "lala1023", "team": "bnds", "k": 18, "d": 6, "a": 7},
+            { "player": "一只熊某", "team": "bnds", "k": 7, "d": 8, "a": 5},
+            { "player": "wyy200838", "team": "bnds", "k": 15, "d": 9, "a": 5},
+            { "player": "拔刀斩不斩", "team": "bnds", "k": 18, "d": 8, "a": 3},
+            { "player": "Lpm3k", "team": "bnuo", "k": 10, "d": 15, "a": 5},
+            { "player": "sgy", "team": "bnuo", "k": 7, "d": 14, "a": 2},
+            { "player": "紫月幽魔", "team": "bnuo", "k": 2, "d": 16, "a": 1},
+            { "player": "cry f0r me", "team": "bnuo", "k": 9, "d": 12, "a": 4},
+            { "player": "Arbor", "team": "bnuo", "k": 13, "d": 12, "a": 8}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2026-02-09-2000",
+      "stage": "第一阶段",
+      "status": "completed",
+      "format": "bo1",
+      "time": "2026-02-09T20:00:00+08:00",
+      "teams": {
+        "a": "bnub",
+        "b": "bnuo"
+      },
+      "score": {
+        "a": "13",
+        "b": "6"
+      },
+      "banpick": [
+        { "team": "bnuo", "action": "ban", "map": "Inferno" },
+        { "team": "bnuo", "action": "ban", "map": "Nuke" },
+        { "team": "bnub", "action": "ban", "map": "Overpass" },
+        { "team": "bnub", "action": "ban", "map": "Dust 2" },
+        { "team": "bnub", "action": "ban", "map": "Mirage" },
+        { "team": "bnuo", "action": "ban", "map": "Anubis" },
+        { "team": "bnub", "action": "pick", "map": "Ancient" },
+        { "team": "bnub", "action": "side", "side": "CT", "map": "Ancient" }
+      ],
+      "maps": [
+        {
+          "name": "Ancient",
+          "score": { "a": 13, "b": 6 }
+        }
+      ]
+    },
+    {
+      "id": "m-2026-02-11-2000",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-11T20:00:00+08:00",
+      "teams": {
+        "a": "rdfz",
+        "b": "bnds"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-13-2300",
+      "stage": "第一阶段",
+      "status": "upcoming",
+      "format": "bo1",
+      "time": "2026-02-13T23:00:00+08:00",
+      "teams": {
+        "a": "bjsq",
+        "b": "bnuo"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-13-2000",
+      "stage": "第一阶段",
+      "status": "tba",
+      "format": "bo1",
+      "time": "",
+      "teams": {
+        "a": "bnds",
+        "b": "bnub"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    },
+    {
+      "id": "m-2026-02-10-2000",
+      "stage": "第一阶段",
+      "status": "tba",
+      "format": "bo1",
+      "time": "",
+      "teams": {
+        "a": "bnds",
+        "b": "bjsq"
+      },
+      "score": {
+        "a": "tba",
+        "b": "tba"
+      },
+      "banpick": [],
+      "maps": []
+    }
+  ],
+  "map_pool": [
+    "Dust 2",
+    "Mirage",
+    "Anubis",
+    "Ancient",
+    "Nuke",
+    "Inferno",
+    "Overpass"
+  ]
+}

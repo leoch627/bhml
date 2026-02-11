@@ -1,0 +1,20 @@
+{
+  "notes": "示例文件，可复制为 teams.json 使用。",
+  "teams": {
+    "alpha": {
+      "name": "示例战队 Alpha",
+      "members": ["Player1", "Player2", "Player3", "Player4", "Player5"],
+      "logo": "assets/logos/alpha.png"
+    },
+    "beta": {
+      "name": "示例战队 Beta",
+      "members": ["A", "B", "C", "D", "E"],
+      "logo": "assets/logos/beta.png"
+    },
+    "tba": {
+      "name": "TBA",
+      "members": [],
+      "logo": ""
+    }
+  }
+}
