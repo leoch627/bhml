@@ -224,7 +224,7 @@
     {
       "id": "m-2026-02-10-2000",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-10T20:00:00+08:00",
       "teams": {
@@ -232,11 +232,38 @@
         "b": "bnuo"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "13",
+        "b": "4"
       },
-      "banpick": [],
-      "maps": []
+      "replay": "https://www.bilibili.com/video/BV1tTFQzzEAV/",
+      "banpick": [
+        { "team": "bnds", "action": "ban", "map": "Inferno" },
+        { "team": "bnds", "action": "ban", "map": "Dust 2" },
+        { "team": "bnuo", "action": "ban", "map": "Nuke" },
+        { "team": "bnuo", "action": "ban", "map": "Ancient" },
+        { "team": "bnuo", "action": "ban", "map": "Overpass" },
+        { "team": "bnds", "action": "ban", "map": "Anubis" },
+        { "team": "bnds", "action": "pick", "map": "Mirage" },
+        { "team": "bnuo", "action": "side", "side": "CT", "map": "Mirage" }
+      ],
+      "maps": [
+        {
+          "name": "Mirage",
+          "score": { "a": 13, "b": 4 },
+          "player_stats": [
+            { "player": "areub0ttt", "team": "bnds", "k": 12, "d": 11, "a": 3},
+            { "player": "lala1023", "team": "bnds", "k": 18, "d": 6, "a": 7},
+            { "player": "一只熊某", "team": "bnds", "k": 7, "d": 8, "a": 5},
+            { "player": "wyy200838", "team": "bnds", "k": 15, "d": 9, "a": 5},
+            { "player": "拔刀斩不斩", "team": "bnds", "k": 18, "d": 8, "a": 3},
+            { "player": "Lpm3k", "team": "bnuo", "k": 10, "d": 15, "a": 5},
+            { "player": "sgy", "team": "bnuo", "k": 7, "d": 14, "a": 2},
+            { "player": "紫月幽魔", "team": "bnuo", "k": 2, "d": 16, "a": 1},
+            { "player": "cry f0r me", "team": "bnuo", "k": 9, "d": 12, "a": 4},
+            { "player": "Arbor", "team": "bnuo", "k": 13, "d": 12, "a": 8}
+          ]
+        }
+      ]
     },
     {
       "id": "m-2026-02-09-2000",
@@ -252,6 +279,7 @@
         "a": "13",
         "b": "6"
       },
+      "replay": "https://www.bilibili.com/video/BV1xNcgz9ENg/",
       "banpick": [
         { "team": "bnuo", "action": "ban", "map": "Inferno" },
         { "team": "bnuo", "action": "ban", "map": "Nuke" },
