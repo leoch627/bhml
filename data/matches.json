@@ -300,7 +300,7 @@
     {
       "id": "m-2026-02-12-2000",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-12T20:00:00+08:00",
       "teams": {
@@ -308,11 +308,38 @@
         "b": "bnds"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "3",
+        "b": "13"
       },
-      "banpick": [],
-      "maps": []
+      "banpick": [
+        { "team": "bnds", "action": "ban", "map": "Inferno" },
+        { "team": "bnds", "action": "ban", "map": "Dust 2" },
+        { "team": "rdfz", "action": "ban", "map": "Overpass" },
+        { "team": "rdfz", "action": "ban", "map": "Anubis" },
+        { "team": "rdfz", "action": "ban", "map": "Ancient" },
+        { "team": "bnds", "action": "ban", "map": "Anubis" },
+        { "team": "bnds", "action": "pick", "map": "Mirage" },
+        { "team": "rdfz", "action": "side", "side": "CT", "map": "Mirage" }
+      ],
+      "maps": [
+        {
+          "name": "Mirage",
+          "score": { "a": 3, "b": 13 },
+          "player_stats": {
+            { "player": "areub0ttt", "team": "bnds", "k": 18, "d": 12, "a": 6},
+            { "player": "lala1023", "team": "bnds", "k": 13, "d": 8, "a": 5},
+            { "player": "一只熊某", "team": "bnds", "k": 16, "d": 8, "a": 4},
+            { "player": "wyy200838", "team": "bnds", "k": 10, "d": 8, "a": 2},
+            { "player": "拔刀斩不斩", "team": "bnds", "k": 10, "d": 11, "a": 7},
+            { "player": "Ali&dom", "team": "rdfz", "k": 5, "d": 13, "a": 3},
+            { "player": "涉谷第一突破手", "team": "rdfz", "k": 3, "d": 14, "a": 1},
+            { "player": "m0SEsy", "team": "rdfz", "k": 6, "d": 4, "a": 13},
+            { "player": "cxy0714", "team": "rdfz", "k": 23, "d": 12, "a": 4},
+            { "player": "卷轴", "team": "rdfz", "k": 12, "d": 11, "a": 3},
+ 
+          }
+        }
+      ]
     },
     {
       "id": "m-2026-02-13-2300",
