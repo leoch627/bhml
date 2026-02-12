@@ -325,7 +325,7 @@
         {
           "name": "Mirage",
           "score": { "a": 3, "b": 13 },
-          "player_stats": {
+          "player_stats": [
             { "player": "areub0ttt", "team": "bnds", "k": 18, "d": 12, "a": 6},
             { "player": "lala1023", "team": "bnds", "k": 13, "d": 8, "a": 5},
             { "player": "一只熊某", "team": "bnds", "k": 16, "d": 8, "a": 4},
@@ -336,8 +336,7 @@
             { "player": "m0SEsy", "team": "rdfz", "k": 6, "d": 4, "a": 13},
             { "player": "cxy0714", "team": "rdfz", "k": 23, "d": 12, "a": 4},
             { "player": "卷轴", "team": "rdfz", "k": 12, "d": 11, "a": 3}
- 
-          }
+          ]
         }
       ]
     },
