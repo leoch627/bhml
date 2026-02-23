@@ -343,19 +343,49 @@
     {
       "id": "m-2026-02-13-2300",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-13T23:00:00+08:00",
       "teams": {
-        "a": "bjsq",
-        "b": "bnuo"
+        "a": "bnuo",
+        "b": "bjsq"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "8",
+        "b": "13"
       },
-      "banpick": [],
-      "maps": []
+      "replay": "https://www.bilibili.com/video/BV195cTTjECF/",
+      "banpick": [
+        { "team": "bjsq", "action": "ban", "map": "Inferno" },
+        { "team": "bjsq", "action": "ban", "map": "Anubis" },
+        { "team": "bnuo", "action": "ban", "map": "Ancient" },
+        { "team": "bnuo", "action": "ban", "map": "Nuke" },
+        { "team": "bnuo", "action": "ban", "map": "Mirage" },
+        { "team": "bjsq", "action": "ban", "map": "Overpass" },
+        { "team": "bjsq", "action": "pick", "map": "Dust 2" },
+        { "team": "bjsq", "action": "side", "side": "CT", "map": "Dust 2" }
+      ],
+      "maps": [
+        {
+          "name": "Dust 2",
+          "score": {
+            "a": 8,
+            "b": 13
+          },
+          "player_stats": [
+            { "player": "Lpm3k", "team": "bnuo", "k": 12, "a": 5, "d": 16, "rating": 0.71 },
+            { "player": "用户1562352", "team": "bnuo", "k": 11, "a": 5, "d": 17, "rating": 0.61 },
+            { "player": "Nightmare♡", "team": "bnuo", "k": 19, "a": 5, "d": 15, "rating": 1.19 },
+            { "player": "用户4202907", "team": "bnuo", "k": 7, "a": 7, "d": 16, "rating": 0.41 },
+            { "player": "cry for me", "team": "bnuo", "k": 15, "a": 2, "d": 16, "rating": 0.88 },
+            { "player": "pvp大神皮皮震得", "team": "bjsq", "k": 15, "a": 7, "d": 10, "rating": 1.36 },
+            { "player": "bullet", "team": "bjsq", "k": 21, "a": 5, "d": 10, "rating": 1.91 },
+            { "player": "顶针bullet", "team": "bjsq", "k": 11, "a": 7, "d": 13, "rating": 0.79 },
+            { "player": "Ishh^bullet", "team": "bjsq", "k": 25, "a": 5, "d": 13, "rating": 1.79 },
+            { "player": "赵继伟bullet", "team": "bjsq", "k": 13, "a": 8, "d": 16, "rating": 0.76 }
+          ]
+        }
+      ]
     },
     {
       "id": "m-2026-02-24-2000",
@@ -382,7 +412,7 @@
       "time": "2026-02-24T22:00:00+08:00",
       "teams": {
         "a": "bnds",
-        "b": "bnub"
+        "b": "bnua"
       },
       "score": {
         "a": "tba",
@@ -416,7 +446,7 @@
       "time": "2026-02-25T22:00:00+08:00",
       "teams": {
         "a": "bnuo",
-        "b": "bnub"
+        "b": "bnua"
       },
       "score": {
         "a": "tba",
@@ -450,7 +480,7 @@
       "time": "2026-02-26T22:00:00+08:00",
       "teams": {
         "a": "bjsq",
-        "b": "bnub"
+        "b": "bnua"
       },
       "score": {
         "a": "tba",
@@ -467,7 +497,7 @@
       "time": "",
       "teams": {
         "a": "bnds",
-        "b": "bnub"
+        "b": "bnua"
       },
       "score": {
         "a": "tba",
@@ -476,23 +506,6 @@
       "banpick": [],
       "maps": []
     },
-    {
-      "id": "m-2026-02-10-2000",
-      "stage": "第一阶段",
-      "status": "tba",
-      "format": "bo1",
-      "time": "",
-      "teams": {
-        "a": "bnds",
-        "b": "bjsq"
-      },
-      "score": {
-        "a": "tba",
-        "b": "tba"
-      },
-      "banpick": [],
-      "maps": []
-    }
   ],
   "map_pool": [
     "Dust 2",
