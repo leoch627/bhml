@@ -488,23 +488,6 @@
       },
       "banpick": [],
       "maps": []
-    },
-    {
-      "id": "m-2026-02-13-2000",
-      "stage": "第一阶段",
-      "status": "tba",
-      "format": "bo1",
-      "time": "",
-      "teams": {
-        "a": "bnds",
-        "b": "bnua"
-      },
-      "score": {
-        "a": "tba",
-        "b": "tba"
-      },
-      "banpick": [],
-      "maps": []
     }
   ],
   "map_pool": [
