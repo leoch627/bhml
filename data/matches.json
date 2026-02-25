@@ -390,7 +390,8 @@
     {
       "id": "m-2026-02-24-2000",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
+      "match_type": "forfeit",
       "format": "bo1",
       "time": "2026-02-24T20:00:00+08:00",
       "teams": {
@@ -398,16 +399,23 @@
         "b": "bjsq"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "0",
+        "b": "13"
       },
-      "banpick": [],
+      "forfeit": {
+        "loser": "bnds",
+        "note": "弃赛"
+      },
+      "banpick": [
+        { "team": "bnds", "action": "forfeit", "note": "弃赛" }
+      ],
       "maps": []
     },
     {
       "id": "m-2026-02-24-2200",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
+      "match_type": "forfeit",
       "format": "bo1",
       "time": "2026-02-24T22:00:00+08:00",
       "teams": {
@@ -415,27 +423,40 @@
         "b": "bnua"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "0",
+        "b": "13"
       },
-      "banpick": [],
+      "forfeit": {
+        "loser": "bnds",
+        "note": "弃赛"
+      },
+      "banpick": [
+        { "team": "bnds", "action": "forfeit", "note": "弃赛" }
+      ],
       "maps": []
     },
     {
       "id": "m-2026-02-25-2000",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
+      "match_type": "forfeit",
       "format": "bo1",
       "time": "2026-02-25T20:00:00+08:00",
       "teams": {
-        "a": "bnuo",
-        "b": "bnds"
+        "a": "bnds",
+        "b": "sdsz"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "0",
+        "b": "13"
       },
-      "banpick": [],
+      "forfeit": {
+        "loser": "bnds",
+        "note": "弃赛"
+      },
+      "banpick": [
+        { "team": "bnds", "action": "forfeit", "note": "弃赛" }
+      ],
       "maps": []
     },
     {
