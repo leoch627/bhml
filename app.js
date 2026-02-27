@@ -307,6 +307,21 @@ const buildTeamStats = () => {
   return stats;
 };
 
+const getHeadToHead = (idA, idB) => {
+  const completed = state.matches.filter((m) => m?.status === "completed");
+  const match = completed.find(
+    (m) =>
+      (m?.teams?.a === idA && m?.teams?.b === idB) || (m?.teams?.a === idB && m?.teams?.b === idA)
+  );
+  if (!match) return 0;
+  const scoreA = toNumber(match?.score?.a);
+  const scoreB = toNumber(match?.score?.b);
+  if (scoreA === null || scoreB === null) return 0;
+  if (scoreA > scoreB) return match?.teams?.a === idA ? 1 : -1;
+  if (scoreB > scoreA) return match?.teams?.b === idA ? 1 : -1;
+  return 0;
+};
+
 const getStreak = (teamId) => {
   const completedMatches = state.matches
     .filter((match) => match?.status === "completed")
@@ -357,7 +372,8 @@ const renderStandings = () => {
   const rows = Object.values(stats).map((teamStat) => {
     const team = resolveTeam(teamStat.id);
     const total = teamStat.wins + teamStat.losses;
-    const winRate = total === 0 ? "0%" : `${Math.round((teamStat.wins / total) * 100)}%`;
+    const winRateValue = total === 0 ? 0 : teamStat.wins / total;
+    const winRate = total === 0 ? "0%" : `${Math.round(winRateValue * 100)}%`;
     const streak = getStreak(teamStat.id);
     let lastMatchText = "TBA";
     if (teamStat.lastMatch) {
@@ -372,16 +388,40 @@ const renderStandings = () => {
       const opponentScore = isTeamA ? scoreB : scoreA;
       lastMatchText = `vs ${opponent.name} ${teamScore}:${opponentScore}`;
     }
-    return { id: teamStat.id, team, winRate, streak, lastMatchText, wins: teamStat.wins, losses: teamStat.losses };
+    return {
+      id: teamStat.id,
+      team,
+      winRate,
+      winRateValue,
+      streak,
+      lastMatchText,
+      wins: teamStat.wins,
+      losses: teamStat.losses,
+    };
   });
 
-  rows.sort((a, b) => b.wins - a.wins || a.losses - b.losses);
+  rows.sort((a, b) => {
+    if (b.winRateValue !== a.winRateValue) return b.winRateValue - a.winRateValue;
+    const h2h = getHeadToHead(a.id, b.id);
+    return h2h;
+  });
 
-  rows.forEach((row) => {
+  let nextRank = 1;
+  const ranked = rows.map((row, i) => {
+    const prev = rows[i - 1];
+    const sameRate = prev && prev.winRateValue === row.winRateValue;
+    const prevBeatMe = sameRate && getHeadToHead(prev.id, row.id) > 0;
+    const rankDisplay = !i || !sameRate || prevBeatMe ? String(nextRank++) : "并列";
+    return { ...row, rankDisplay };
+  });
+
+  ranked.forEach((row, i) => {
+    const isTop4 = i < 4;
     const item = document.createElement("a");
-    item.className = "standings-row standings-row-link";
+    item.className = "standings-row standings-row-link" + (isTop4 ? " standings-qualified" : "");
     item.href = `team.html?id=${row.id}`;
     item.innerHTML = `
+      <div class="standings-rank-col">${row.rankDisplay}</div>
       <div class="standings-team">
         <img src="${row.team.logo}" alt="" onerror="this.style.display='none'" />
         <span>${row.team.name}</span>
