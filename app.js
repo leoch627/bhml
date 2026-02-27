@@ -401,7 +401,8 @@ const renderStandings = () => {
   });
 
   rows.sort((a, b) => {
-    if (b.winRateValue !== a.winRateValue) return b.winRateValue - a.winRateValue;
+    const rateDiff = b.winRateValue - a.winRateValue;
+    if (Math.abs(rateDiff) > 1e-9) return rateDiff;
     const h2h = getHeadToHead(a.id, b.id);
     return -h2h;
   });
@@ -409,7 +410,7 @@ const renderStandings = () => {
   let nextRank = 1;
   const ranked = rows.map((row, i) => {
     const prev = rows[i - 1];
-    const sameRate = prev && prev.winRateValue === row.winRateValue;
+    const sameRate = prev && Math.abs((prev.winRateValue || 0) - (row.winRateValue || 0)) < 1e-9;
     const prevBeatMe = sameRate && getHeadToHead(prev.id, row.id) > 0;
     const rankDisplay = !i || !sameRate || prevBeatMe ? String(nextRank++) : "并列";
     return { ...row, rankDisplay };
@@ -421,7 +422,7 @@ const renderStandings = () => {
     item.className = "standings-row standings-row-link" + (isTop4 ? " standings-qualified" : "");
     item.href = `team.html?id=${row.id}`;
     item.innerHTML = `
-      <div class="standings-rank-col">${row.rankDisplay}</div>
+      <div class="standings-rank-col">${row.rankDisplay || "—"}</div>
       <div class="standings-team">
         <img src="${row.team.logo}" alt="" onerror="this.style.display='none'" />
         <span>${row.team.name}</span>

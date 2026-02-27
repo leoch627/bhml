@@ -484,7 +484,8 @@ p {
 
 .standings-rank-col {
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--text-main);
+  min-width: 2ch;
 }
 
 .standings-row.standings-qualified {
