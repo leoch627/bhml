@@ -403,7 +403,7 @@ const renderStandings = () => {
   rows.sort((a, b) => {
     if (b.winRateValue !== a.winRateValue) return b.winRateValue - a.winRateValue;
     const h2h = getHeadToHead(a.id, b.id);
-    return h2h;
+    return -h2h;
   });
 
   let nextRank = 1;
