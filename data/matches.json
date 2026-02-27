@@ -462,41 +462,81 @@
     {
       "id": "m-2026-02-25-2200",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-25T22:00:00+08:00",
       "teams": {
-        "a": "bnuo",
-        "b": "bnua"
+        "a": "bnua",
+        "b": "sdsz"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "13",
+        "b": "6"
       },
       "banpick": [],
-      "maps": []
+      "maps": [
+        {
+          "name": "Nuke",
+          "score": {
+            "a": 13,
+            "b": 6
+          },
+          "player_stats": [
+            { "player": "起司我楽", "team": "bnua", "k": 12, "d": 14, "a": 6 },
+            { "player": "Lyr1cal", "team": "bnua", "k": 20, "d": 10, "a": 1 },
+            { "player": "HardFooD", "team": "bnua", "k": 16, "d": 9, "a": 7 },
+            { "player": "ch0pper", "team": "bnua", "k": 11, "d": 14, "a": 4 },
+            { "player": "76561199294265091", "team": "bnua", "k": 12, "d": 8, "a": 3 },
+            { "player": "highnut", "team": "sdsz", "k": 13, "d": 17, "a": 3 },
+            { "player": "TeamSDSZ.Vansdaddy", "team": "sdsz", "k": 14, "d": 14, "a": 3 },
+            { "player": "TeamSDSZ.ROXY", "team": "sdsz", "k": 11, "d": 16, "a": 4 },
+            { "player": "A1R", "team": "sdsz", "k": 11, "d": 16, "a": 1 },
+            { "player": "H", "team": "sdsz", "k": 6, "d": 12, "a": 1 }
+          ]
+        }
+      ]
     },
     {
       "id": "m-2026-02-26-2000",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-26T20:00:00+08:00",
       "teams": {
-        "a": "bnuo",
-        "b": "bjsq"
+        "a": "bjsq",
+        "b": "sdsz"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "13",
+        "b": "5"
       },
       "banpick": [],
-      "maps": []
+      "maps": [
+        {
+          "name": "Nuke",
+          "score": {
+            "a": 13,
+            "b": 5
+          },
+          "player_stats": [
+            { "player": "ALPAKINO", "team": "bjsq", "k": 16, "d": 12, "a": 8 },
+            { "player": "Yzbullet", "team": "bjsq", "k": 16, "d": 13, "a": 6 },
+            { "player": "坨坨堆", "team": "bjsq", "k": 16, "d": 10, "a": 5 },
+            { "player": "Ishh^", "team": "bjsq", "k": 18, "d": 10, "a": 0 },
+            { "player": "14岁守B的fw", "team": "bjsq", "k": 13, "d": 9, "a": 0 },
+            { "player": "TeamSDSZ.ROXY", "team": "sdsz", "k": 17, "d": 16, "a": 4 },
+            { "player": "TeamSDSZ.Vansdaddy", "team": "sdsz", "k": 13, "d": 14, "a": 2 },
+            { "player": "highnut", "team": "sdsz", "k": 10, "d": 17, "a": 1 },
+            { "player": "A1R", "team": "sdsz", "k": 11, "d": 16, "a": 2 },
+            { "player": "H", "team": "sdsz", "k": 2, "d": 17, "a": 6 }
+          ]
+        }
+      ]
     },
     {
       "id": "m-2026-02-26-2200",
       "stage": "第一阶段",
-      "status": "upcoming",
+      "status": "completed",
       "format": "bo1",
       "time": "2026-02-26T22:00:00+08:00",
       "teams": {
@@ -504,11 +544,31 @@
         "b": "bnua"
       },
       "score": {
-        "a": "tba",
-        "b": "tba"
+        "a": "13",
+        "b": "9"
       },
       "banpick": [],
-      "maps": []
+      "maps": [
+        {
+          "name": "TBA",
+          "score": {
+            "a": 13,
+            "b": 9
+          },
+          "player_stats": [
+            { "player": "Ishh^bullet", "team": "bjsq", "k": 11, "d": 7, "a": 3 },
+            { "player": "Yzbullet", "team": "bjsq", "k": 10, "d": 7, "a": 2 },
+            { "player": "赵继伟bullet", "team": "bjsq", "k": 6, "d": 8, "a": 2 },
+            { "player": "顶针bullet", "team": "bjsq", "k": 5, "d": 9, "a": 6 },
+            { "player": "PVP大神皮皮震_", "team": "bjsq", "k": 4, "d": 9, "a": 0 },
+            { "player": "walkers", "team": "bnua", "k": 13, "d": 10, "a": 0 },
+            { "player": "ch0pper", "team": "bnua", "k": 5, "d": 11, "a": 5 },
+            { "player": "Zcyload", "team": "bnua", "k": 5, "d": 8, "a": 1 },
+            { "player": "用户4265091", "team": "bnua", "k": 5, "d": 10, "a": 1 },
+            { "player": "用户4265091", "team": "bnua", "k": 5, "d": 10, "a": 1 }
+          ]
+        }
+      ]
     }
   ],
   "map_pool": [
